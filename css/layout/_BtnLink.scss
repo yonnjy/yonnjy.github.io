@@ -1,0 +1,44 @@
+.btn_link {
+    position: fixed;
+    top: 15rem;
+    right: 3.2rem;
+    z-index: 999;
+
+    ul {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: calc(100vh - 30rem);
+            background: #fff;
+        }
+
+        li {
+            a {
+                display: block;
+                position: relative;
+                font-size: 0;
+                padding: 0 8px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 5px;
+                    height: 5px;
+                    background: red;
+                }
+            }
+
+            &.on a::before {
+                width: 4px;
+                height: 4rem;
+                background: blue;
+            }
+        }
+    }
+}

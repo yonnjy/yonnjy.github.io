@@ -14,9 +14,24 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     line-height: 1;
-    color: #444;
+    color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 ul,
@@ -35,24 +50,37 @@ img {
     vertical-align: middle;
 }
 
-em,
-address {
+address,
+em {
     font-style: normal;
+}
+
+strong,
+b {
+    font-weight: normal;
 }
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
-input::-webkit-search-results-decoration{
-      opacity: 0;
-      position: absolute;
-      right: 0;
+input::-webkit-search-results-decoration {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+.slick-track,
+.slick-list {
+    transition-delay: 30ms;
 }
 
 button {
     border: none;
-    outline: none;
-    background: none;
-    user-select: none;
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
     cursor: pointer;
 }
