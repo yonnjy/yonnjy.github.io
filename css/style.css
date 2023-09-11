@@ -46,6 +46,23 @@ p {
   line-height: 1.4;
 }
 
+@media (max-width: 768px) {
+  .section {
+    height: 100vh;
+  }
+  .section h2 {
+    position: absolute;
+    top: 2rem;
+    right: 1.2rem;
+    writing-mode: vertical-rl;
+    color: #fff;
+    opacity: 0;
+    font-size: 1.5rem;
+  }
+  .section.on h2 {
+    opacity: 1;
+  }
+}
 .btn_link {
   position: fixed;
   top: 15rem;
@@ -56,14 +73,14 @@ p {
   position: relative;
 }
 .btn_link ul li.on a::before {
-  height: 6.4rem;
+  height: 6vh;
   background: #fff;
 }
 .btn_link ul li a {
   position: relative;
   display: block;
   width: 0.2rem;
-  height: 6.4rem;
+  height: 6vh;
   font-size: 0;
   background: #ddd;
 }
@@ -79,6 +96,40 @@ p {
   background: #ffd900;
 }
 
+@media (max-width: 768px) {
+  .btn_link {
+    position: fixed;
+    top: 15rem;
+    right: 1.8rem;
+    z-index: 999;
+  }
+  .btn_link ul {
+    position: relative;
+  }
+  .btn_link ul li.on a::before {
+    height: 5.5555555556vh;
+    background: #fff;
+  }
+  .btn_link ul li a {
+    position: relative;
+    display: block;
+    width: 0.2rem;
+    height: 5.5555555556vh;
+    font-size: 0;
+    background: #ddd;
+  }
+  .btn_link ul li a::before {
+    transition: linear 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0.5rem;
+    height: 0;
+    background: #ffd900;
+  }
+}
 .int {
   background: #000 fixed;
   z-index: -1;
@@ -468,8 +519,8 @@ p {
     background: #fff;
   }
   .int .inner h1 {
-    font-size: 4.8vw;
-    font-weight: 700;
+    font-size: 8vw;
+    font-weight: 900;
     margin: 0 0 1.6rem 0;
   }
   .int .inner p {

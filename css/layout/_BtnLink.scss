@@ -8,7 +8,7 @@
         position: relative;
         li {
             &.on a::before {
-                height: 6.4rem;
+                height: 6vh;
                 background: #fff;
             }
 
@@ -16,7 +16,7 @@
                 position: relative;
                 display: block;
                 width: 0.2rem;
-                height: 6.4rem;
+                height: 6vh;
                 font-size: 0;
                 background: #ddd;
                 
@@ -30,6 +30,46 @@
                     width: 0.5rem;
                     height: 0;
                     background: #ffd900;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .btn_link {
+        position: fixed;
+        top: 15rem;
+        right: 1.8rem;
+        z-index: 999;
+    
+        ul {
+            position: relative;
+            li {
+                &.on a::before {
+                    height: calc(50vh / 9);
+                    background: #fff;
+                }
+    
+                a {
+                    position: relative;
+                    display: block;
+                    width: 0.2rem;
+                    height: calc(50vh / 9);
+                    font-size: 0;
+                    background: #ddd;
+                    
+                    &::before {
+                        transition: linear .5s;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        width: 0.5rem;
+                        height: 0;
+                        background: #ffd900;
+                    }
                 }
             }
         }
