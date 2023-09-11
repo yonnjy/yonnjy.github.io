@@ -55,43 +55,140 @@ p {
 .btn_link ul {
   position: relative;
 }
-.btn_link ul::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: calc(100vh - 30rem);
+.btn_link ul li.on a::before {
+  height: 6.4rem;
   background: #fff;
 }
 .btn_link ul li a {
-  display: block;
   position: relative;
+  display: block;
+  width: 0.2rem;
+  height: 6.4rem;
   font-size: 0;
-  padding: 0 8px;
+  background: #ddd;
 }
 .btn_link ul li a::before {
+  transition: linear 0.5s;
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  background: red;
-}
-.btn_link ul li.on a::before {
-  width: 4px;
-  height: 4rem;
-  background: blue;
+  transform: translate(-50%, 0);
+  width: 0.5rem;
+  height: 0;
+  background: #ffd900;
 }
 
 .int {
-  background: #000;
+  background: #000 fixed;
   z-index: -1;
   color: #f9f9f9;
   overflow: hidden;
 }
+.int::before {
+  content: "";
+  position: absolute;
+  top: 70vh;
+  left: 14vw;
+  width: 1px;
+  height: 180rem;
+  background: #fff;
+  transform-origin: left top;
+  transform: rotate(-81deg);
+}
+.int::after {
+  content: "";
+  position: absolute;
+  top: 70vh;
+  left: 14vw;
+  width: 1px;
+  height: 40rem;
+  background: rgb(255, 255, 255);
+  transform-origin: right top;
+  transform: rotate(65deg);
+}
+.int .gooey {
+  filter: url(#goo);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.int .gooey::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+  background: #ffea71;
+  transform: rotate(45deg);
+  animation: before 5s linear infinite;
+}
+.int .gooey::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+  background: #ffd900;
+  transform: rotate(45deg);
+  animation: after 5s linear infinite;
+}
+@keyframes before {
+  0% {
+    top: -40px;
+    left: 13.4vw;
+  }
+  98% {
+    top: 69vh;
+    left: 13.8vw;
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 69vh;
+    left: 13vw;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+  }
+}
+@keyframes after {
+  0% {
+    top: -40px;
+    left: 13.5vw;
+  }
+  98% {
+    top: 70vh;
+    left: 13.8vw;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 68vh;
+    left: 14.5vw;
+    width: 5px;
+    height: 5px;
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 .int .inner {
   text-align: right;
+}
+.int .inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14vw;
+  width: 1px;
+  height: 70vh;
+  background: #fff;
 }
 .int .inner h1 {
   font-size: 4rem;
@@ -118,117 +215,284 @@ p {
   transform: translate(-50%, -50%);
   background: #FFDB00;
 }
-.int .gooey01 {
-  filter: url(#goo);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.int .gooey01::after {
-  content: "";
-  position: absolute;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  background: #ffd900;
-  animation: goo01 8s infinite;
-}
-.int .gooey01::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 21.8rem;
-  width: 1px;
-  height: 68rem;
-  background: #fff;
-}
-.int .gooey02 {
-  filter: url(#goo);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.int .gooey02::after {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: #ffd900;
-  animation: goo02 8s 8s infinite;
-}
-.int .gooey02::before {
-  content: "";
-  position: absolute;
-  bottom: 7rem;
-  left: 8.8rem;
-  width: 1px;
-  height: 30rem;
-  background: #fff;
-  transform: rotate(-120deg);
-}
-.int .gooey03 {
-  filter: url(#goo);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.int .gooey03::after {
-  content: "";
-  position: absolute;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  background: #ffd900;
-  animation: goo03 8s infinite;
-}
-.int .gooey03::before {
-  content: "";
-  position: absolute;
-  bottom: -74.6rem;
-  left: 110.7rem;
-  width: 1px;
-  height: 180rem;
-  background: #fff;
-  transform: rotate(-81deg);
-}
 
-@keyframes goo01 {
-  0% {
+@media (max-width: 1600px) {
+  .int {
+    background: #000;
+    z-index: -1;
+    color: #f9f9f9;
+    overflow: hidden;
+  }
+  .int::before {
+    content: "";
+    position: absolute;
+    top: 70vh;
+    left: 14vw;
+    width: 1px;
+    height: 180rem;
+    background: #fff;
+    transform-origin: left top;
+    transform: rotate(-81deg);
+  }
+  .int::after {
+    content: "";
+    position: absolute;
+    top: 70vh;
+    left: 14vw;
+    width: 1px;
+    height: 40rem;
+    background: rgb(255, 255, 255);
+    transform-origin: right top;
+    transform: rotate(65deg);
+  }
+  .int .gooey {
+    filter: url(#goo);
+    position: absolute;
     top: 0;
-    left: 20.6rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
-  90% {
-    left: 21.3rem;
-    width: 1rem;
-    height: 1rem;
-    opacity: 1;
+  .int .gooey::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    background: #ffea71;
+    transform: rotate(45deg);
+    animation: before 5s linear infinite;
   }
-  100% {
-    top: 66rem;
-    left: 21rem;
-    width: 1.6rem;
-    height: 1.6rem;
-    opacity: 0;
+  .int .gooey::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    background: #ffd900;
+    transform: rotate(45deg);
+    animation: after 5s linear infinite;
+  }
+  @keyframes before {
+    0% {
+      top: -40px;
+      left: 13vw;
+    }
+    98% {
+      top: 69vh;
+      left: 13.5vw;
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+    100% {
+      top: 69vh;
+      left: 13vw;
+      width: 15px;
+      height: 15px;
+      opacity: 0;
+    }
+  }
+  @keyframes after {
+    0% {
+      top: -40px;
+      left: 13vw;
+    }
+    98% {
+      top: 70vh;
+      left: 13.5vw;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+    100% {
+      top: 68vh;
+      left: 14.5vw;
+      width: 5px;
+      height: 5px;
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+  .int .inner {
+    text-align: right;
+    padding: 0 8rem 0 0;
+  }
+  .int .inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14vw;
+    width: 1px;
+    height: 70vh;
+    background: #fff;
+  }
+  .int .inner h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0 0 2.4rem 0;
+  }
+  .int .inner p {
+    margin: 0 0 20rem 0;
+    line-height: 1.5;
+  }
+  .int .inner p span {
+    position: relative;
+    color: #000;
+    font-weight: 500;
+  }
+  .int .inner p span::before {
+    content: "";
+    width: 105%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFDB00;
   }
 }
-@keyframes goo02 {
-  0% {
-    bottom: 28.9rem;
-    left: 21rem;
+@media (max-width: 768px) {
+  .int {
+    background: #000;
+    z-index: -1;
+    color: #f9f9f9;
+    overflow: hidden;
   }
-  100% {
-    bottom: 16.5rem;
-    left: -5px;
+  .int::before {
+    content: "";
+    position: absolute;
+    top: 70vh;
+    left: 14vw;
+    width: 1px;
+    height: 180rem;
+    background: #fff;
+    transform: rotate(-81deg);
+  }
+  .int::after {
+    content: "";
+    position: absolute;
+    top: 70vh;
+    left: 14vw;
+    width: 1px;
+    height: 40rem;
+    background: rgb(255, 255, 255);
+    transform-origin: right top;
+    transform: rotate(65deg);
+  }
+  .int .gooey {
+    filter: url(#goo);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .int .gooey::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    background: #ffea71;
+    transform: rotate(45deg);
+    animation: before 5s linear infinite;
+  }
+  .int .gooey::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    background: #ffd900;
+    transform: rotate(45deg);
+    animation: after 5s linear infinite;
+  }
+  @keyframes before {
+    0% {
+      top: -40px;
+      left: 11vw;
+    }
+    98% {
+      top: 69vh;
+      left: 13vw;
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+    100% {
+      top: 69vh;
+      left: 12vw;
+      width: 15px;
+      height: 15px;
+      opacity: 0;
+    }
+  }
+  @keyframes after {
+    0% {
+      top: -40px;
+      left: 11vw;
+    }
+    98% {
+      top: 70vh;
+      left: 13vw;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+    100% {
+      top: 68vh;
+      left: 14vw;
+      width: 5px;
+      height: 5px;
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+  .int .inner {
+    text-align: right;
+    padding: 0 6rem 0 0;
+  }
+  .int .inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14vw;
+    width: 1px;
+    height: 70vh;
+    background: #fff;
+  }
+  .int .inner h1 {
+    font-size: 4.8vw;
+    font-weight: 700;
+    margin: 0 0 1.6rem 0;
+  }
+  .int .inner p {
+    font-size: 3vw;
+    margin: 0 0 20rem 0;
+    line-height: 1.5;
+  }
+  .int .inner p span {
+    font-size: 3vw;
+    position: relative;
+    color: #000;
+    font-weight: 500;
+  }
+  .int .inner p span::before {
+    content: "";
+    width: 105%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFDB00;
   }
 }
 #portfolio01 {
