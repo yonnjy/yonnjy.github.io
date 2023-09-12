@@ -8,10 +8,9 @@ $(function () {
 
         afterRender: function () {
             $('#main .section').eq(0).addClass('on');
-            // $('.btn_link li').eq(0).addClass('on').siblings().removeClass('on');
         },
 
-        afterLoad: function (lnk, idx, direction) {
+        afterLoad: function (lnk, idx) {
             $('#main .section').eq(idx - 1).addClass('on').siblings().removeClass('on');
             $('.btn_link li').eq(idx - 1).addClass('on');
             $('.btn_link li').eq(idx).removeClass('on');

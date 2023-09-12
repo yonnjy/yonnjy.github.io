@@ -1,29 +1,62 @@
 #portfolio01 {
     background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
     @include background-cover();
+
+    .color {
+        span {
+            background: #F5E8DF;
+            color: #222;
+        }
+    }
 }
 
 #portfolio02 {
     background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+    .color {
+        span {
+            background: #132E27;
+        }
+    }
 }
 
 #portfolio03 {
     background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+    .color {
+        span {
+            background: #BFAE90;
+            color: #222;
+        }
+    }
 }
 
 #portfolio04 {
-    background: url(../../images/sec04_bg.jpg) no-repeat fixed center top/cover;
+    background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
     @include background-cover();
+    .color {
+        span {
+            background: #b80101;
+        }
+    }
 }
 
 #portfolio05 {
     background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+    .color {
+        span {
+            background: #00a256;
+        }
+    }
 }
 
 #portfolio06 {
     background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+    .color {
+        span {
+            background: #02652f;
+        }
+    }
 }
