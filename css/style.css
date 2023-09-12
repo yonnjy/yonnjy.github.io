@@ -28,6 +28,7 @@ body {
 
 .section {
   height: 100vh;
+  color: #fff;
 }
 .section h2 {
   position: absolute;
@@ -43,7 +44,6 @@ body {
 
 p {
   font-size: 1.6rem;
-  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -63,6 +63,19 @@ p {
     opacity: 1;
   }
 }
+.pofol .color span:nth-child(1) {
+  background: #FFF;
+  border: 1px solid #ddd;
+}
+
+.pofol .color span:nth-child(2) {
+  background: #222;
+}
+
+#portfolio01 .color span:nth-child(3) {
+  background: #F5E8DF;
+}
+
 .btn_link {
   position: fixed;
   top: 15rem;
@@ -546,8 +559,143 @@ p {
     background: #FFDB00;
   }
 }
+.pofol {
+  overflow: hidden;
+}
+.pofol .img_box {
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  transform: rotate(-35deg);
+}
+.pofol .img_box .top {
+  margin: 0px 0 3rem 44rem;
+}
+.pofol .img_box .top img {
+  margin: 0 3rem 0 0;
+  border-radius: 2rem;
+}
+.pofol .img_box .bot img {
+  margin: 0 3rem 0 0;
+  border-radius: 2rem;
+}
+.pofol .txt_box {
+  text-align: right;
+}
+.pofol .txt_box .tit {
+  position: relative;
+  margin: 0 0 4rem 0;
+}
+.pofol .txt_box .tit::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  width: 3rem;
+  height: 3px;
+  background: #ffdb00;
+}
+.pofol .txt_box .tit span {
+  display: block;
+  font-weight: 500;
+  color: #888;
+  margin: 0 0 1.2rem 0;
+}
+.pofol .txt_box .tit h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.pofol .txt_box .txt {
+  position: relative;
+  margin: 0 0 6rem 0;
+}
+.pofol .txt_box .txt .list li {
+  padding: 0 0 1.6rem 0;
+}
+.pofol .txt_box .txt .list .tools {
+  padding: 0 0 1.9rem 0;
+}
+.pofol .txt_box .txt .con {
+  position: absolute;
+  top: 0;
+  right: 9rem;
+  width: 59rem;
+}
+.pofol .txt_box .txt .con li {
+  padding: 0 0 1.6rem 0;
+}
+.pofol .txt_box .txt .con .color {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+}
+.pofol .txt_box .txt .con .color span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 0;
+}
+.pofol .txt_box .txt .con .tools span {
+  color: #222;
+  font-weight: 700;
+  padding: 0 4px;
+  background: #ffdb00;
+}
+.pofol .txt_box .txt .con .info {
+  line-height: 1.4;
+}
+.pofol .txt_box .link {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+.pofol .txt_box .link li a {
+  display: block;
+  padding: 6px 20px;
+  background: #ffdb00;
+  border-radius: 5px;
+  color: #222;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.pofol .txt_box .link .figma a {
+  background: #fff;
+}
+
 #portfolio01 {
-  background: url(../../images/sec01_bg.png) no-repeat center top/cover;
+  background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #111;
+}
+
+#portfolio02 {
+  background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #111;
+}
+
+#portfolio03 {
+  background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #111;
+}
+
+#portfolio04 {
+  background: url(../../images/sec04_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #111;
+}
+
+#portfolio05 {
+  background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #111;
+}
+
+#portfolio06 {
+  background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
   background-color: #111;
 }/*# sourceMappingURL=style.css.map */

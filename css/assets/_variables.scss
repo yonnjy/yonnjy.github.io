@@ -1,2 +1,15 @@
 $background-color: #000;
 $w-color: #f9f9f9;
+
+.pofol .color span:nth-child(1) {
+    background: #FFF;
+    border: 1px solid #ddd;
+}
+
+.pofol .color span:nth-child(2) {
+    background: #222;
+}
+
+#portfolio01 .color span:nth-child(3) {
+    background: #F5E8DF;
+}
