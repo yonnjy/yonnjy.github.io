@@ -146,14 +146,14 @@ p {
     padding: 0 1.8rem;
   }
   .btn_link ul li.on a::before {
-    height: 5.5555555556vh;
+    height: 6vh;
     background: #fff;
   }
   .btn_link ul li a {
     position: relative;
     display: block;
     width: 0.2rem;
-    height: 5.5555555556vh;
+    height: 6vh;
     font-size: 0;
     background: #ddd;
   }
@@ -590,6 +590,121 @@ p {
     background: #FFDB00;
   }
 }
+.po01 {
+  background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po01 .color span {
+  background: #F5E8DF;
+  color: #222;
+}
+
+.po02 {
+  background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po02 .color span {
+  background: #132E27;
+}
+
+.po03 {
+  background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po03 .color span {
+  background: #BFAE90;
+  color: #222;
+}
+
+.po04 {
+  background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po04 .color span {
+  background: #b80101;
+}
+
+.po05 {
+  background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po05 .color span {
+  background: #00a256;
+}
+
+.po06 {
+  background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.po06 .color span {
+  background: #02652f;
+}
+
+@media (max-width: 768px) {
+  .po01 {
+    background: url(../../images/sec01_bg02.png) no-repeat center top/cover;
+  }
+  .po01 .color span {
+    background: #F5E8DF;
+    color: #222;
+  }
+  .po02 {
+    background: url(../../images/sec02_bg.jpg) no-repeat center top/cover;
+  }
+  .po02 .color span {
+    background: #132E27;
+    outline: 1px solid #888;
+  }
+  .po03 {
+    background: url(../../images/sec03_bg.jpg) no-repeat center top/cover;
+  }
+  .po03 .txt .list .font {
+    margin: 0 0 1.5rem 0;
+  }
+  .po03 .txt .list .tools {
+    margin: 0 0 -2rem 0;
+  }
+  .po03 .color span {
+    background: #BFAE90;
+    color: #222;
+  }
+  .po04 {
+    background: url(../../images/sec04_bg.png) no-repeat 80% top/cover;
+  }
+  .po04 .txt .list .font {
+    margin: 0 0 1.5rem 0;
+  }
+  .po04 .txt .list .color {
+    margin: 0 0 0.2rem 0;
+  }
+  .po04 .txt .list .tools {
+    margin: 0 0 -2.2rem 0;
+  }
+  .po04 .color span {
+    background: #b80101;
+  }
+  .po05 {
+    background: url(../../images/sec05_bg.jpg) no-repeat right top/cover;
+  }
+  .po05 .txt .list .tools {
+    margin: 0 0 -2.2rem 0;
+  }
+  .po05 .color span {
+    background: #00a256;
+  }
+  .po06 {
+    background: url(../../images/sec06_bg.jpg) no-repeat center top/cover;
+  }
+  .po06 .color span {
+    background: #02652f;
+  }
+}
 .pofol {
   overflow: hidden;
 }
@@ -761,7 +876,7 @@ p {
     position: absolute;
     bottom: 4rem;
     left: 0;
-    transform: translate(0, 0);
+    transform: translate(-100%, 0);
     text-align: left;
     visibility: hidden;
     transition: 0.5s 0.5s;
@@ -852,7 +967,7 @@ p {
   }
   .pofol .txt_box .link li a {
     display: block;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
     border-radius: 0.5rem;
     font-weight: 700;
     font-size: 1.4rem;
@@ -874,104 +989,7 @@ p {
     visibility: visible;
   }
   .pofol.on {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
-  }
-}
-.po01 {
-  background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po01 .color span {
-  background: #F5E8DF;
-  color: #222;
-}
-
-.po02 {
-  background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po02 .color span {
-  background: #132E27;
-}
-
-.po03 {
-  background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po03 .color span {
-  background: #BFAE90;
-  color: #222;
-}
-
-.po04 {
-  background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po04 .color span {
-  background: #b80101;
-}
-
-.po05 {
-  background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po05 .color span {
-  background: #00a256;
-}
-
-.po06 {
-  background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
-  background-blend-mode: multiply;
-  background-color: #222;
-}
-.po06 .color span {
-  background: #02652f;
-}
-
-@media (max-width: 768px) {
-  .po01 {
-    background: url(../../images/sec01_bg02.png) no-repeat center top/cover;
-  }
-  .po01 .color span {
-    background: #F5E8DF;
-    color: #222;
-  }
-  .po02 {
-    background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
-  }
-  .po02 .color span {
-    background: #132E27;
-    outline: 1px solid #888;
-  }
-  .po03 {
-    background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
-  }
-  .po03 .color span {
-    background: #BFAE90;
-    color: #222;
-  }
-  .po04 {
-    background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
-  }
-  .po04 .color span {
-    background: #b80101;
-  }
-  .po05 {
-    background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
-  }
-  .po05 .color span {
-    background: #00a256;
-  }
-  .po06 {
-    background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
-  }
-  .po06 .color span {
-    background: #02652f;
   }
 }/*# sourceMappingURL=style.css.map */

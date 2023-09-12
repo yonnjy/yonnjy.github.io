@@ -79,7 +79,7 @@
     }
 
     .po02 {
-        background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
+        background: url(../../images/sec02_bg.jpg) no-repeat center top/cover;
 
         .color {
             span {
@@ -90,7 +90,19 @@
     }
 
     .po03 {
-        background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
+        background: url(../../images/sec03_bg.jpg) no-repeat center top/cover;
+
+        .txt {
+            .list {
+                .font {
+                    margin: 0 0 1.5rem 0;
+                }
+
+                .tools {
+                    margin: 0 0 -2rem 0;
+                }
+            }
+        }
 
         .color {
             span {
@@ -102,7 +114,22 @@
     }
 
     .po04 {
-        background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
+        background: url(../../images/sec04_bg.png) no-repeat 80% top/cover;
+
+        .txt {
+            .list {
+                .font {
+                    margin: 0 0 1.5rem 0;
+                }
+                .color {
+                    margin: 0 0 0.2rem 0;
+                }
+
+                .tools {
+                    margin: 0 0 -2.2rem 0;
+                }
+            }
+        }
 
         .color {
             span {
@@ -112,8 +139,14 @@
     }
 
     .po05 {
-        background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
-
+        background: url(../../images/sec05_bg.jpg) no-repeat right top/cover;
+        .txt {
+            .list {
+                .tools {
+                    margin: 0 0 -2.2rem 0;
+                }
+            }
+        }
         .color {
             span {
                 background: #00a256;
@@ -122,7 +155,7 @@
     }
 
     .po06 {
-        background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
+        background: url(../../images/sec06_bg.jpg) no-repeat center top/cover;
 
         .color {
             span {

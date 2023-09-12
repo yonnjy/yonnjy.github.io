@@ -48,7 +48,7 @@
             li {
                 padding: 0 1.8rem;
                 &.on a::before {
-                    height: calc(50vh / 9);
+                    height: 6vh;
                     background: #fff;
                 }
     
@@ -56,7 +56,7 @@
                     position: relative;
                     display: block;
                     width: 0.2rem;
-                    height: calc(50vh / 9);
+                    height: 6vh;
                     font-size: 0;
                     background: #ddd;
                     
