@@ -8,6 +8,7 @@ $(function () {
 
         afterRender: function () {
             $('#main .section').eq(0).addClass('on');
+            $('#po').eq(0).addClass('on');
         },
 
         afterLoad: function (lnk, idx) {

@@ -13,7 +13,7 @@
         z-index: 999;
         opacity: 0.8;
         transition: .5s .5s;
-        
+
         img {
             transition: 3s;
         }
@@ -195,82 +195,30 @@
 
 @media (max-width:768px) {
     .pofol {
+        transition: .5s;
         overflow: hidden;
-    
-        .img_box_odd {
-            position: absolute;
-            width: 84rem;
-            height: 90rem;
-            overflow: hidden;
-            top: 50%;
-            left: 10.5rem;
-            transform: translate(-150%, -50%);
-            border-radius: 2rem;
-            z-index: 999;
-            opacity: 0.8;
-            transition: .5s .5s;
-            
-            img {
-                transition: 3s;
-            }
-    
-            &:hover {
-                opacity: 1;
-            }
-    
-            &:hover img {
-                transform: translate(0, calc(-100% + 90rem));
-            }
-        }
-    
-        .img_box {
-            position: absolute;
-            top: 10%;
-            left: 2.4rem;
-            transform: rotate(0);
-            z-index: 999;
-    
-            &>* img {
-                margin: 0 0 0 0;
-                border-radius: 2rem;
-                filter: brightness(80%);
-                transition: .5s;
-                width: 90%;
-    
-                &:hover {
-                    filter: brightness(100%);
-                }
-            }
-    
-            .top {
-                margin: 0 0 0 0;
-                transform: translate(-150%, 0);
-                visibility: hidden;
-                transition: .5s .5s;
-                display: none;
 
-                & img:nth-child(1) {
-                }
-            }
-    
-            .bot {
-                display: none;
-            }
+        .img_box_odd {
+            display: none;
         }
-    
+
+        .img_box {
+            display: none;
+        }
+
         .txt_box {
             position: absolute;
+            top: 50%;
             left: 50%;
-            bottom: 2.4rem;
+            transform: translate(-100%, -50%);
             text-align: right;
-            transform: translate(-50%, 0);
             visibility: hidden;
-            transition: .3s;
-    
+            transition: .5s .5s;
+
             .tit {
                 position: relative;
                 margin: 0 0 4rem 0;
-    
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -280,7 +228,7 @@
                     height: 3px;
                     background: #ffdb00;
                 }
-    
+
                 span {
                     font-size: 1.4rem;
                     display: block;
@@ -288,41 +236,45 @@
                     color: #888;
                     margin: 0 0 0.8rem 0;
                 }
-    
+
                 h3 {
                     font-size: 2.4rem;
                     font-weight: 700;
                 }
             }
-    
+
             .txt {
                 position: relative;
-                margin: 0 0 10rem 0;
-    
+                margin: 0 0 14rem 0;
+
                 .list {
                     li {
-                        padding: 0 0 1.8rem 0;
+                        padding: 0 0 1.7rem 0;
                         font-size: 1.4rem;
                         font-weight: 700;
-                        color: #888;
+                        color: #ddd;
+                    }
+
+                    .color {
+                        padding: 0 0 2rem 0;
                     }
 
                     .tools {
-                        padding: 0 0 4.2rem 0;
+                        padding: 0 0 5.5rem 0;
                     }
                 }
-    
+
                 .con {
                     position: absolute;
                     top: 0;
                     right: 7rem;
-                    width: 65vw;
-    
+                    width: 60vw;
+
                     li {
                         font-size: 1.4rem;
                         padding: 0 0 1.4rem 0;
                     }
-    
+
                     .color {
                         span {
                             display: inline-block;
@@ -331,8 +283,10 @@
                             font-weight: 500;
                         }
                     }
-    
+
                     .tools {
+                        line-height: 1.4;
+
                         span {
                             color: #222;
                             font-weight: 700;
@@ -340,10 +294,10 @@
                             background: #ffdb00;
                         }
                     }
-    
+
                     .info {
                         line-height: 1.4;
-    
+
                         span {
                             color: #222;
                             font-weight: 700;
@@ -352,17 +306,17 @@
                         }
                     }
                 }
-    
+
             }
-    
+
             .link {
                 display: flex;
                 gap: 1.5rem;
                 justify-content: flex-end;
-    
+
                 li {
                     color: #222;
-    
+
                     a {
                         display: block;
                         padding: 0.6rem 2rem;
@@ -372,7 +326,7 @@
                         background: #fff;
                     }
                 }
-    
+
                 .website {
                     a {
                         background: #ffdb00;
@@ -380,21 +334,27 @@
                 }
             }
         }
-    
+
         &.on .img_box_odd {
             transform: translate(0, -50%);
             visibility: visible;
         }
-    
+
         &.on .img_box .top,
         &.on .img_box .bot {
             transform: translate(0, 0);
             visibility: visible;
         }
-    
+
         &.on .txt_box {
-            transform: translate(-50%, 0);
+            transform: translate(-50%, -50%);
             visibility: visible;
         }
+
+        &.on {
+            background-color: #222;
+            background-blend-mode: multiply;
+        }
     }
+
 }

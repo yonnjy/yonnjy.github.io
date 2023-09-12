@@ -40,12 +40,13 @@
     .btn_link {
         position: fixed;
         top: 15rem;
-        right: 1.8rem;
+        right: 0;
         z-index: 999;
     
         ul {
             position: relative;
             li {
+                padding: 0 1.8rem;
                 &.on a::before {
                     height: calc(50vh / 9);
                     background: #fff;

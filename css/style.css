@@ -49,23 +49,6 @@ p {
   font-size: 1.6rem;
 }
 
-@media (max-width: 768px) {
-  .section {
-    height: 100vh;
-  }
-  .section h2 {
-    position: absolute;
-    top: 2rem;
-    right: 1.2rem;
-    writing-mode: vertical-rl;
-    color: #fff;
-    opacity: 0;
-    font-size: 1.5rem;
-  }
-  .section.on h2 {
-    opacity: 1;
-  }
-}
 ._bg {
   background: #000;
 }
@@ -90,6 +73,32 @@ p {
   background: #ffd900;
 }
 
+@media (max-width: 768px) {
+  .section {
+    height: 100vh;
+  }
+  .section h2 {
+    position: absolute;
+    top: 2rem;
+    right: 1.2rem;
+    writing-mode: vertical-rl;
+    color: #fff;
+    opacity: 0;
+    font-size: 1.5rem;
+  }
+  .section.on h2 {
+    opacity: 1;
+  }
+  #cursor {
+    display: none;
+  }
+  #cursor .cursor__inner {
+    display: none;
+  }
+  .poin .cursor__inner {
+    display: none;
+  }
+}
 .btn_link {
   position: fixed;
   top: 15rem;
@@ -127,11 +136,14 @@ p {
   .btn_link {
     position: fixed;
     top: 15rem;
-    right: 1.8rem;
+    right: 0;
     z-index: 999;
   }
   .btn_link ul {
     position: relative;
+  }
+  .btn_link ul li {
+    padding: 0 1.8rem;
   }
   .btn_link ul li.on a::before {
     height: 5.5555555556vh;
@@ -735,65 +747,23 @@ p {
 
 @media (max-width: 768px) {
   .pofol {
+    transition: 0.5s;
     overflow: hidden;
   }
   .pofol .img_box_odd {
-    position: absolute;
-    width: 84rem;
-    height: 90rem;
-    overflow: hidden;
-    top: 50%;
-    left: 10.5rem;
-    transform: translate(-150%, -50%);
-    border-radius: 2rem;
-    z-index: 999;
-    opacity: 0.8;
-    transition: 0.5s 0.5s;
-  }
-  .pofol .img_box_odd img {
-    transition: 3s;
-  }
-  .pofol .img_box_odd:hover {
-    opacity: 1;
-  }
-  .pofol .img_box_odd:hover img {
-    transform: translate(0, calc(-100% + 90rem));
-  }
-  .pofol .img_box {
-    position: absolute;
-    top: 10%;
-    left: 2.4rem;
-    transform: rotate(0);
-    z-index: 999;
-  }
-  .pofol .img_box > * img {
-    margin: 0 0 0 0;
-    border-radius: 2rem;
-    filter: brightness(80%);
-    transition: 0.5s;
-    width: 90%;
-  }
-  .pofol .img_box > * img:hover {
-    filter: brightness(100%);
-  }
-  .pofol .img_box .top {
-    margin: 0 0 0 0;
-    transform: translate(-150%, 0);
-    visibility: hidden;
-    transition: 0.5s 0.5s;
     display: none;
   }
-  .pofol .img_box .bot {
+  .pofol .img_box {
     display: none;
   }
   .pofol .txt_box {
     position: absolute;
+    top: 50%;
     left: 50%;
-    bottom: 2.4rem;
+    transform: translate(-100%, -50%);
     text-align: right;
-    transform: translate(-50%, 0);
     visibility: hidden;
-    transition: 0.3s;
+    transition: 0.5s 0.5s;
   }
   .pofol .txt_box .tit {
     position: relative;
@@ -821,22 +791,25 @@ p {
   }
   .pofol .txt_box .txt {
     position: relative;
-    margin: 0 0 10rem 0;
+    margin: 0 0 14rem 0;
   }
   .pofol .txt_box .txt .list li {
-    padding: 0 0 1.8rem 0;
+    padding: 0 0 1.7rem 0;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #888;
+    color: #ddd;
+  }
+  .pofol .txt_box .txt .list .color {
+    padding: 0 0 2rem 0;
   }
   .pofol .txt_box .txt .list .tools {
-    padding: 0 0 4.2rem 0;
+    padding: 0 0 5.5rem 0;
   }
   .pofol .txt_box .txt .con {
     position: absolute;
     top: 0;
     right: 7rem;
-    width: 65vw;
+    width: 60vw;
   }
   .pofol .txt_box .txt .con li {
     font-size: 1.4rem;
@@ -847,6 +820,9 @@ p {
     padding: 0.4rem 2rem;
     font-size: 1.3rem;
     font-weight: 500;
+  }
+  .pofol .txt_box .txt .con .tools {
+    line-height: 1.4;
   }
   .pofol .txt_box .txt .con .tools span {
     color: #222;
@@ -891,62 +867,82 @@ p {
     visibility: visible;
   }
   .pofol.on .txt_box {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     visibility: visible;
   }
+  .pofol.on {
+    background-color: #222;
+    background-blend-mode: multiply;
+  }
 }
-#portfolio01 {
+.po01 {
   background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio01 .color span {
+.po01 .color span {
   background: #F5E8DF;
   color: #222;
 }
 
-#portfolio02 {
+.po02 {
   background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio02 .color span {
+.po02 .color span {
   background: #132E27;
 }
 
-#portfolio03 {
+.po03 {
   background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio03 .color span {
+.po03 .color span {
   background: #BFAE90;
   color: #222;
 }
 
-#portfolio04 {
+.po04 {
   background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio04 .color span {
+.po04 .color span {
   background: #b80101;
 }
 
-#portfolio05 {
+.po05 {
   background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio05 .color span {
+.po05 .color span {
   background: #00a256;
 }
 
-#portfolio06 {
+.po06 {
   background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
   background-blend-mode: multiply;
-  background-color: #111;
+  background-color: #222;
 }
-#portfolio06 .color span {
+.po06 .color span {
   background: #02652f;
+}
+
+@media (max-width: 768px) {
+  .po01 {
+    background: url(../../images/sec01_bg.png) no-repeat center top/cover;
+  }
+  .po01 .color span {
+    background: #F5E8DF;
+    color: #222;
+  }
+  .po02 {
+    background: url(../../images/sec02_bg.jpg) no-repeat center top/cover;
+  }
+  .po02 .color span {
+    background: #132E27;
+  }
 }/*# sourceMappingURL=style.css.map */

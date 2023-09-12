@@ -1,4 +1,4 @@
-#portfolio01 {
+.po01 {
     background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
     @include background-cover();
 
@@ -10,9 +10,10 @@
     }
 }
 
-#portfolio02 {
+.po02 {
     background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+
     .color {
         span {
             background: #132E27;
@@ -20,9 +21,10 @@
     }
 }
 
-#portfolio03 {
+.po03 {
     background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+
     .color {
         span {
             background: #BFAE90;
@@ -31,9 +33,10 @@
     }
 }
 
-#portfolio04 {
+.po04 {
     background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
     @include background-cover();
+
     .color {
         span {
             background: #b80101;
@@ -41,9 +44,10 @@
     }
 }
 
-#portfolio05 {
+.po05 {
     background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+
     .color {
         span {
             background: #00a256;
@@ -51,12 +55,36 @@
     }
 }
 
-#portfolio06 {
+.po06 {
     background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
     @include background-cover();
+
     .color {
         span {
             background: #02652f;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .po01 {
+        background: url(../../images/sec01_bg.png) no-repeat center top/cover;
+
+        .color {
+            span {
+                background: #F5E8DF;
+                color: #222;
+            }
+        }
+    }
+    
+    .po02 {
+        background: url(../../images/sec02_bg.jpg) no-repeat center top/cover;
+
+        .color {
+            span {
+                background: #132E27;
+            }
         }
     }
 }
