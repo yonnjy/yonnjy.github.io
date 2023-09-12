@@ -695,6 +695,7 @@ p {
 .pofol .txt_box .txt .con .color span {
   display: inline-block;
   padding: 0.4rem 2.4rem;
+  border-radius: 3px;
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -758,10 +759,10 @@ p {
   }
   .pofol .txt_box {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
-    text-align: right;
+    bottom: 4rem;
+    left: 0;
+    transform: translate(0, 0);
+    text-align: left;
     visibility: hidden;
     transition: 0.5s 0.5s;
   }
@@ -772,7 +773,7 @@ p {
   .pofol .txt_box .tit::after {
     content: "";
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: -2rem;
     width: 3rem;
     height: 3px;
@@ -794,21 +795,18 @@ p {
     margin: 0 0 14rem 0;
   }
   .pofol .txt_box .txt .list li {
-    padding: 0 0 1.7rem 0;
+    padding: 0 0 1.9rem 0;
     font-size: 1.4rem;
     font-weight: 700;
     color: #ddd;
   }
-  .pofol .txt_box .txt .list .color {
-    padding: 0 0 2rem 0;
-  }
   .pofol .txt_box .txt .list .tools {
-    padding: 0 0 5.5rem 0;
+    padding: 0 0 6rem 0;
   }
   .pofol .txt_box .txt .con {
     position: absolute;
     top: 0;
-    right: 7rem;
+    left: 7rem;
     width: 60vw;
   }
   .pofol .txt_box .txt .con li {
@@ -817,8 +815,9 @@ p {
   }
   .pofol .txt_box .txt .con .color span {
     display: inline-block;
-    padding: 0.4rem 2rem;
-    font-size: 1.3rem;
+    border-radius: 3px;
+    padding: 0.4rem 2.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
   }
   .pofol .txt_box .txt .con .tools {
@@ -840,16 +839,20 @@ p {
     background: #ffdb00;
   }
   .pofol .txt_box .link {
+    position: relative;
+    width: 90vw;
     display: flex;
-    gap: 1.5rem;
-    justify-content: flex-end;
+    gap: 0.8rem;
+    justify-content: space-between;
   }
   .pofol .txt_box .link li {
     color: #222;
+    width: 100%;
+    text-align: center;
   }
   .pofol .txt_box .link li a {
     display: block;
-    padding: 0.6rem 2rem;
+    padding: 0.8rem 0;
     border-radius: 0.5rem;
     font-weight: 700;
     font-size: 1.4rem;
@@ -867,11 +870,11 @@ p {
     visibility: visible;
   }
   .pofol.on .txt_box {
-    transform: translate(-50%, -50%);
+    transform: translate(0, 0);
     visibility: visible;
   }
   .pofol.on {
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
   }
 }
@@ -933,16 +936,42 @@ p {
 
 @media (max-width: 768px) {
   .po01 {
-    background: url(../../images/sec01_bg.png) no-repeat center top/cover;
+    background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
   }
   .po01 .color span {
     background: #F5E8DF;
     color: #222;
   }
   .po02 {
-    background: url(../../images/sec02_bg.jpg) no-repeat center top/cover;
+    background: url(../../images/sec02_bg.jpg) no-repeat fixed center top/cover;
   }
   .po02 .color span {
     background: #132E27;
+    outline: 1px solid #888;
+  }
+  .po03 {
+    background: url(../../images/sec03_bg.jpg) no-repeat fixed center top/cover;
+  }
+  .po03 .color span {
+    background: #BFAE90;
+    color: #222;
+  }
+  .po04 {
+    background: url(../../images/sec04_bg.png) no-repeat fixed center top/cover;
+  }
+  .po04 .color span {
+    background: #b80101;
+  }
+  .po05 {
+    background: url(../../images/sec05_bg.jpg) no-repeat fixed center top/cover;
+  }
+  .po05 .color span {
+    background: #00a256;
+  }
+  .po06 {
+    background: url(../../images/sec06_bg.jpg) no-repeat fixed center top/cover;
+  }
+  .po06 .color span {
+    background: #02652f;
   }
 }/*# sourceMappingURL=style.css.map */
