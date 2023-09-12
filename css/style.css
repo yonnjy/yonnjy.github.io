@@ -992,4 +992,8 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
   }
+}
+.trann ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }/*# sourceMappingURL=style.css.map */
