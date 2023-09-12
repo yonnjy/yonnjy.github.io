@@ -54,7 +54,7 @@
             width: 20px;
             height: 20px;
             border-radius: 0% 100% 40% 60% / 0% 60% 40% 100%;
-            background: #ffd900;
+            background: $point-color;
             transform: rotate(45deg);
             animation: after 5s linear infinite;
         }
@@ -207,7 +207,7 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 0% 100% 40% 60% / 0% 60% 40% 100%;
-                background: #ffd900;
+                background: $point-color;
                 transform: rotate(45deg);
                 animation: after 5s linear infinite;
             }
@@ -361,7 +361,7 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 0% 100% 40% 60% / 0% 60% 40% 100%;
-                background: #ffd900;
+                background: $point-color;
                 transform: rotate(45deg);
                 animation: after 5s linear infinite;
             }
@@ -418,7 +418,6 @@
     
         .inner {
             text-align: right;
-            padding: 0 6rem 0 0;
     
             &::before {
                 content: '';
@@ -429,34 +428,41 @@
                 height: 70vh;
                 background: #fff;
             }
-    
-            h1 {
-                font-size: 8vw;
-                font-weight: 900;
-                margin: 0 0 1.6rem 0;
-            }
-    
-            p {
-                font-size: 3vw;
-                margin: 0 0 20rem 0;
-                line-height: 1.5;
-    
-                span {
+
+            .title {
+                position: absolute;
+                right: 5.6rem;
+                top: 50%;
+                transform: translate(0, -50%);
+                h1 {
+                    font-size: 8vw;
+                    font-weight: 900;
+                    margin: 0 0 1.6rem 0;
+                }
+        
+                p {
                     font-size: 3vw;
-                    position: relative;
-                    color: $background-color;
-                    font-weight: 500;
-    
-                    &::before {
-                        content: '';
-                        width: 105%;
-                        height: 100%;
-                        z-index: -1;
-                        @include position-center();
-                        background: #FFDB00;
+                    margin: 0 0 0 0;
+                    line-height: 1.5;
+        
+                    span {
+                        font-size: 3vw;
+                        position: relative;
+                        color: $background-color;
+                        font-weight: 500;
+        
+                        &::before {
+                            content: '';
+                            width: 105%;
+                            height: 100%;
+                            z-index: -1;
+                            @include position-center();
+                            background: #FFDB00;
+                        }
                     }
                 }
             }
+    
         }
     }
 }

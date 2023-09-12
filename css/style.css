@@ -70,6 +70,26 @@ p {
   background: #000;
 }
 
+#cursor {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+#cursor .cursor__inner {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
+
+.poin .cursor__inner {
+  background: #ffd900;
+}
+
 .btn_link {
   position: fixed;
   top: 15rem;
@@ -514,7 +534,6 @@ p {
   }
   .int .inner {
     text-align: right;
-    padding: 0 6rem 0 0;
   }
   .int .inner::before {
     content: "";
@@ -525,23 +544,29 @@ p {
     height: 70vh;
     background: #fff;
   }
-  .int .inner h1 {
+  .int .inner .title {
+    position: absolute;
+    right: 5.6rem;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .int .inner .title h1 {
     font-size: 8vw;
     font-weight: 900;
     margin: 0 0 1.6rem 0;
   }
-  .int .inner p {
+  .int .inner .title p {
     font-size: 3vw;
-    margin: 0 0 20rem 0;
+    margin: 0 0 0 0;
     line-height: 1.5;
   }
-  .int .inner p span {
+  .int .inner .title p span {
     font-size: 3vw;
     position: relative;
     color: #000;
     font-weight: 500;
   }
-  .int .inner p span::before {
+  .int .inner .title p span::before {
     content: "";
     width: 105%;
     height: 100%;
@@ -556,30 +581,54 @@ p {
 .pofol {
   overflow: hidden;
 }
+.pofol .img_box_odd {
+  position: absolute;
+  width: 84rem;
+  height: 90rem;
+  overflow: hidden;
+  top: 50%;
+  left: 10.5rem;
+  transform: translate(-150%, -50%);
+  border-radius: 2rem;
+  z-index: 999;
+  opacity: 0.8;
+  transition: 0.5s 0.5s;
+}
+.pofol .img_box_odd img {
+  transition: 3s;
+}
+.pofol .img_box_odd:hover {
+  opacity: 1;
+}
+.pofol .img_box_odd:hover img {
+  transform: translate(0, calc(-100% + 90rem));
+}
 .pofol .img_box {
   position: absolute;
   top: 10%;
   left: -20%;
   transform: rotate(-35deg);
+  z-index: 999;
+}
+.pofol .img_box > * img {
+  margin: 0 3rem 0 0;
+  border-radius: 2rem;
+  filter: brightness(80%);
+  transition: 0.5s;
+}
+.pofol .img_box > * img:hover {
+  filter: brightness(100%);
 }
 .pofol .img_box .top {
-  margin: 0px 0 3rem 44rem;
+  margin: 0 0 3rem 44rem;
   transform: translate(-150%, 0);
   visibility: hidden;
   transition: 0.5s 0.5s;
-}
-.pofol .img_box .top img {
-  margin: 0 3rem 0 0;
-  border-radius: 2rem;
 }
 .pofol .img_box .bot {
   transform: translate(-150%, 0);
   visibility: hidden;
   transition: 0.5s 0.8s;
-}
-.pofol .img_box .bot img {
-  margin: 0 3rem 0 0;
-  border-radius: 2rem;
 }
 .pofol .txt_box {
   text-align: right;
@@ -662,14 +711,18 @@ p {
 }
 .pofol .txt_box .link li a {
   display: block;
-  padding: 6px 20px;
-  border-radius: 5px;
+  padding: 0.6rem 2rem;
+  border-radius: 0.5rem;
   font-weight: 700;
   font-size: 1.4rem;
   background: #fff;
 }
 .pofol .txt_box .link .website a {
   background: #ffdb00;
+}
+.pofol.on .img_box_odd {
+  transform: translate(0, -50%);
+  visibility: visible;
 }
 .pofol.on .img_box .top, .pofol.on .img_box .bot {
   transform: translate(0, 0);
@@ -680,6 +733,168 @@ p {
   visibility: visible;
 }
 
+@media (max-width: 768px) {
+  .pofol {
+    overflow: hidden;
+  }
+  .pofol .img_box_odd {
+    position: absolute;
+    width: 84rem;
+    height: 90rem;
+    overflow: hidden;
+    top: 50%;
+    left: 10.5rem;
+    transform: translate(-150%, -50%);
+    border-radius: 2rem;
+    z-index: 999;
+    opacity: 0.8;
+    transition: 0.5s 0.5s;
+  }
+  .pofol .img_box_odd img {
+    transition: 3s;
+  }
+  .pofol .img_box_odd:hover {
+    opacity: 1;
+  }
+  .pofol .img_box_odd:hover img {
+    transform: translate(0, calc(-100% + 90rem));
+  }
+  .pofol .img_box {
+    position: absolute;
+    top: 10%;
+    left: 2.4rem;
+    transform: rotate(0);
+    z-index: 999;
+  }
+  .pofol .img_box > * img {
+    margin: 0 0 0 0;
+    border-radius: 2rem;
+    filter: brightness(80%);
+    transition: 0.5s;
+    width: 90%;
+  }
+  .pofol .img_box > * img:hover {
+    filter: brightness(100%);
+  }
+  .pofol .img_box .top {
+    margin: 0 0 0 0;
+    transform: translate(-150%, 0);
+    visibility: hidden;
+    transition: 0.5s 0.5s;
+    display: none;
+  }
+  .pofol .img_box .bot {
+    display: none;
+  }
+  .pofol .txt_box {
+    position: absolute;
+    left: 50%;
+    bottom: 2.4rem;
+    text-align: right;
+    transform: translate(-50%, 0);
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  .pofol .txt_box .tit {
+    position: relative;
+    margin: 0 0 4rem 0;
+  }
+  .pofol .txt_box .tit::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
+    width: 3rem;
+    height: 3px;
+    background: #ffdb00;
+  }
+  .pofol .txt_box .tit span {
+    font-size: 1.4rem;
+    display: block;
+    font-weight: 500;
+    color: #888;
+    margin: 0 0 0.8rem 0;
+  }
+  .pofol .txt_box .tit h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  .pofol .txt_box .txt {
+    position: relative;
+    margin: 0 0 10rem 0;
+  }
+  .pofol .txt_box .txt .list li {
+    padding: 0 0 1.8rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #888;
+  }
+  .pofol .txt_box .txt .list .tools {
+    padding: 0 0 4.2rem 0;
+  }
+  .pofol .txt_box .txt .con {
+    position: absolute;
+    top: 0;
+    right: 7rem;
+    width: 65vw;
+  }
+  .pofol .txt_box .txt .con li {
+    font-size: 1.4rem;
+    padding: 0 0 1.4rem 0;
+  }
+  .pofol .txt_box .txt .con .color span {
+    display: inline-block;
+    padding: 0.4rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .pofol .txt_box .txt .con .tools span {
+    color: #222;
+    font-weight: 700;
+    padding: 0 4px;
+    background: #ffdb00;
+  }
+  .pofol .txt_box .txt .con .info {
+    line-height: 1.4;
+  }
+  .pofol .txt_box .txt .con .info span {
+    color: #222;
+    font-weight: 700;
+    padding: 0 4px;
+    background: #ffdb00;
+  }
+  .pofol .txt_box .link {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+  .pofol .txt_box .link li {
+    color: #222;
+  }
+  .pofol .txt_box .link li a {
+    display: block;
+    padding: 0.6rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background: #fff;
+  }
+  .pofol .txt_box .link .website a {
+    background: #ffdb00;
+  }
+  .pofol.on .img_box_odd {
+    transform: translate(0, -50%);
+    visibility: visible;
+  }
+  .pofol.on .img_box .top, .pofol.on .img_box .bot {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+  .pofol.on .txt_box {
+    transform: translate(-50%, 0);
+    visibility: visible;
+  }
+}
 #portfolio01 {
   background: url(../../images/sec01_bg.png) no-repeat fixed center top/cover;
   background-blend-mode: multiply;

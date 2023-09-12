@@ -21,8 +21,11 @@
 </head>
 
 <body>
+    <div id="cursor">
+        <div class="cursor__inner"></div>
+    </div>
     <aside class="btn_link">
-        <ul>
+        <ul cursor-class="poin">
             <li class="on"><a href="#intro">2023.Portfolo</a></li>
             <li><a href="#p01">Seoul Wallpaper</a></li>
             <li><a href="#p02">Doban Hospital</a></li>
@@ -36,13 +39,25 @@
     </aside>
     <div id="main" role="main">
         <section id="intro" class="int section">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -10"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg> -->
             <div class="inner">
-                <h1>A STEROTYPED PUBLISHER</h1>
-                <p>
-                    디자인 틀을 벗어나지 않는,<br>
-                    WEB UI/UX틀을 잘 지키는,<br>
-                    <span>틀에 박힌 신입 퍼블리셔</span> 윤재영 입니다.
-                </p>
+                <div class="title">
+                    <h1>A STEROTYPED PUBLISHER</h1>
+                    <p>
+                        디자인 틀을 벗어나지 않는,<br>
+                        WEB UI/UX틀을 잘 지키는,<br>
+                        <span>틀에 박힌 신입 퍼블리셔</span> 윤재영 입니다.
+                    </p>
+                </div>
             </div>
             <h2>2023.Portfolo</h2>
             <div class="gooey" aria-hidden="true"></div>
@@ -81,24 +96,19 @@
                     </ul>
                 </div>
                 <ul class="link">
-                    <li><a href="http://www.seoulwallpaper.co.kr/" target="_blank">ORIGINAL</a></li>
-                    <li><a href="https://www.figma.com/file/O16xcq75HiEmIGQ4XoxTDp/%EC%84%9C%EC%9A%B8%EB%B2%BD%EC%A7%80? type=design&node-id=0%3A1&mode=design&t=1WxgjgvXoCE5sUKm-1"
+                    <li cursor-class="poin"><a href="http://www.seoulwallpaper.co.kr/" target="_blank">ORIGINAL</a></li>
+                    <li cursor-class="poin"><a
+                            href="https://www.figma.com/file/O16xcq75HiEmIGQ4XoxTDp/%EC%84%9C%EC%9A%B8%EB%B2%BD%EC%A7%80? type=design&node-id=0%3A1&mode=design&t=1WxgjgvXoCE5sUKm-1"
                             target="_blank">FIGMA</a></li>
-                    <li class="website"><a href="https://yonnjy.github.io/portfolio01/" target="_blank">WEB</a></li>
+                    <li class="website" cursor-class="poin"><a href="https://yonnjy.github.io/portfolio01/"
+                            target="_blank">WEB</a></li>
                 </ul>
             </div>
         </section>
         <section id="portfolio02" class="pofol section">
             <h2>도반한방병원</h2>
-            <div class="img_box">
-                <div class="top">
-                    <img src="./images/sec02_mob01.png" alt="도반한방병원 모바일 이미지">
-                    <img src="./images/sec02_web01.png" alt="도반한방병원 웹 이미지">
-                </div>
-                <div class="bot">
-                    <img src="./images/sec02_web02.png" alt="도반한방병원 웹 이미지">
-                    <img src="./images/sec02_mob02.png" alt="도반한방병원 모바일 이미지">
-                </div>
+            <div class="img_box_odd">
+                <img src="./images/sec02_web.png" alt="도반한방병원">
             </div>
             <div class="txt_box inner">
                 <div class="tit">
@@ -122,10 +132,12 @@
                     </ul>
                 </div>
                 <ul class="link">
-                    <li><a href="https://thedoban.com/" target="_blank">ORIGINAL</a></li>
-                    <li><a href="https://www.figma.com/file/vZA2BJpBFDCnCWq3R1IjNT/%EB%8F%84%EB%B0%98%ED%95%9C%EB%B0%A9%EB%B3%91%EC%9B%90?type=design&node-id=0%3A1&mode=design&t=uxRreLKotNLzZQW5-1"
+                    <li cursor-class="poin"><a href="https://thedoban.com/" target="_blank">ORIGINAL</a></li>
+                    <li cursor-class="poin"><a
+                            href="https://www.figma.com/file/vZA2BJpBFDCnCWq3R1IjNT/%EB%8F%84%EB%B0%98%ED%95%9C%EB%B0%A9%EB%B3%91%EC%9B%90?type=design&node-id=0%3A1&mode=design&t=uxRreLKotNLzZQW5-1"
                             target="_blank">FIGMA</a></li>
-                    <li class="website"><a href="http://yonnjy.dothome.co.kr/" target="_blank">WEB</a></li>
+                    <li class="website" cursor-class="poin"><a href="http://yonnjy.dothome.co.kr/"
+                            target="_blank">WEB</a></li>
                 </ul>
             </div>
         </section>
@@ -164,25 +176,21 @@
                         </ul>
                     </div>
                     <ul class="link">
-                        <li><a href="https://www.thehyundai.com/Home.html" target="_blank">ORIGINAL</a></li>
-                        <li><a href="https://www.figma.com/file/9RGGN70Wy2Scepdv0lSehG/%EB%8D%94%ED%98%84%EB%8C%80%EB%8B%B7%EC%BB%B4?type=design&node-id=0%3A1&mode=design&t=nIHQ2hjO8T44nXv4-1"
+                        <li cursor-class="poin"><a href="https://www.thehyundai.com/Home.html"
+                                target="_blank">ORIGINAL</a></li>
+                        <li cursor-class="poin"><a
+                                href="https://www.figma.com/file/9RGGN70Wy2Scepdv0lSehG/%EB%8D%94%ED%98%84%EB%8C%80%EB%8B%B7%EC%BB%B4?type=design&node-id=0%3A1&mode=design&t=nIHQ2hjO8T44nXv4-1"
                                 target="_blank">FIGMA</a></li>
-                        <li class="website"><a href="https://yonnjy.github.io/portfolio02/" target="_blank">WEB</a></li>
+                        <li class="website" cursor-class="poin"><a href="https://yonnjy.github.io/portfolio02/"
+                                target="_blank">WEB</a></li>
                     </ul>
                 </div>
             </div>
         </section>
         <section id="portfolio04" class="pofol section">
             <h2>계명문화대</h2>
-            <div class="img_box">
-                <div class="top">
-                    <img src="./images/sec04_mob02.png" alt="계명문화대학교 모바일 이미지">
-                    <img src="./images/sec04_web01.png" alt="계명문화대학교 웹 이미지">
-                </div>
-                <div class="bot">
-                    <img src="./images/sec04_web02.png" alt="계명문화대학교 웹 이미지">
-                    <img src="./images/sec04_mob01.png" alt="계명문화대학교 모바일 이미지">
-                </div>
+            <div class="img_box_odd">
+                <img src="./images/sec04_web.png" alt="계명문화대학교">
             </div>
             <div class="txt_box inner">
                 <div class="tit">
@@ -205,10 +213,12 @@
                     </ul>
                 </div>
                 <ul class="link">
-                    <li><a href="http://www.kmcu.ac.kr/" target="_blank">ORIGINAL</a></li>
-                    <li><a href="https://www.figma.com/file/CTlN0cNKAXGvYhHRZJ07Fz/%EA%B3%84%EB%AA%85%EB%AC%B8%ED%99%94%EB%8C%80%ED%95%99%EA%B5%90?type=design&node-id=0%3A1&mode=design&t=WrTariyqnEZcpklE-1"
+                    <li cursor-class="poin"><a href="http://www.kmcu.ac.kr/" target="_blank">ORIGINAL</a></li>
+                    <li cursor-class="poin"><a
+                            href="https://www.figma.com/file/CTlN0cNKAXGvYhHRZJ07Fz/%EA%B3%84%EB%AA%85%EB%AC%B8%ED%99%94%EB%8C%80%ED%95%99%EA%B5%90?type=design&node-id=0%3A1&mode=design&t=WrTariyqnEZcpklE-1"
                             target="_blank">FIGMA</a></li>
-                    <li class="website"><a href="https://yonnjy.github.io/portfolio03/" target="_blank">WEB</a></li>
+                    <li class="website" cursor-class="poin"><a href="https://yonnjy.github.io/portfolio03/"
+                            target="_blank">WEB</a></li>
                 </ul>
             </div>
         </section>
@@ -240,7 +250,8 @@
                         <li>Noto Sans KR, Roboto</li>
                         <li class="color"><span>#00a256</span></li>
                         <li class="tools">HTML5, CSS3, JavaScript-jQuery, Swiper Slider, Photoshop</li>
-                        <li class="info">정식품 브랜드의 깔끔하고 부드러운 느낌을 주기위해 박스의 모서리를 둥글게 처리하고, grid를 이용한 반응형 홈페이지를 제작하였습니다.</li>
+                        <li class="info">정식품 브랜드의 깔끔하고 부드러운 느낌을 주기위해 박스의 모서리를 둥글게 처리하고, grid를 이용한 반응형 홈페이지를 제작하였습니다.
+                        </li>
                     </ul>
                 </div>
                 <ul class="link">
@@ -253,15 +264,8 @@
         </section>
         <section id="portfolio06" class="pofol section">
             <h2>초 록 우 산</h2>
-            <div class="img_box">
-                <div class="top">
-                    <img src="./images/sec05_mob01.png" alt="정식품 모바일 이미지">
-                    <img src="./images/sec05_web01.png" alt="정식품 웹 이미지">
-                </div>
-                <div class="bot">
-                    <img src="./images/sec05_web02.png" alt="정식품 웹 이미지">
-                    <img src="./images/sec05_mob02.png" alt="정식품 모바일 이미지">
-                </div>
+            <div class="img_box_odd">
+                <img src="./images/sec06_web.png" alt="초록우산어린이재단">
             </div>
             <div class="txt_box inner">
                 <div class="tit">
@@ -278,7 +282,8 @@
                     <ul class="con">
                         <li>Pretendard, Roboto</li>
                         <li class="color"><span>#02652f</span></li>
-                        <li class="tools">HTML5, CSS3, JavaScript-jQuery, <span>YTPlayer,</span> SCSS, Slick Slider, Photoshop</li>
+                        <li class="tools">HTML5, CSS3, JavaScript-jQuery, <span>YTPlayer,</span> SCSS, Slick Slider,
+                            Photoshop</li>
                         <li class="info">슬라이더와 동영상을 이용해 제한적인 화면에서 많은 정보를 효과적으로 전달하고, 재단 홈페이지 특성을 고려해 후원 버튼에
                             시선이 집중되도록 제작하였습니다.</li>
                     </ul>
@@ -293,9 +298,14 @@
         </section>
         <section id="tranning" class="trann section _bg">
             <h2>Tranning</h2>
+            <div class="inner">
+                aaa
+            </div>
         </section>
         <footer id="profile" class="prof section _bg">
-            <div class="f_inner">
+            <h2>INFOMATION</h2>
+            bbb
+            <!-- <div>
                 <div class="box">
                     <div class="info">
                         <div class="img_box">
@@ -447,20 +457,9 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </footer>
     </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -10"
-                    result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-        </defs>
-    </svg>
 </body>
 
 </html>
