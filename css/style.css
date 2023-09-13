@@ -102,11 +102,14 @@ p {
 .btn_link {
   position: fixed;
   top: 15rem;
-  right: 3.2rem;
+  right: 1.1rem;
   z-index: 999;
 }
 .btn_link ul {
   position: relative;
+}
+.btn_link ul li {
+  padding: 0 1.8rem;
 }
 .btn_link ul li.on a::before {
   height: 6vh;
@@ -995,5 +998,56 @@ p {
 }
 .tranning ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tranning ul li {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #111;
+}
+.tranning ul li a .img_box {
+  margin: 0 0 2.4rem 0;
+}
+.tranning ul li a span {
+  padding: 0 1.5rem;
+  display: block;
+  margin: 0 0 1.2rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.tranning ul li a p {
+  padding: 0 1.5rem;
+  color: #aaa;
+  margin: 0 0 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .tranning ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 2.5rem;
+  }
+  .tranning ul li {
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #111;
+  }
+  .tranning ul li a .img_box {
+    margin: 0 0 1.2rem 0;
+  }
+  .tranning ul li a span {
+    padding: 0 1.5rem;
+    display: block;
+    margin: 0 0 1.2rem 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .tranning ul li a p {
+    font-size: 1.4rem;
+    padding: 0 1.5rem;
+    color: #aaa;
+    margin: 0 0 1.2rem 0;
+  }
 }/*# sourceMappingURL=style.css.map */

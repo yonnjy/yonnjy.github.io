@@ -1,12 +1,13 @@
 .btn_link {
     position: fixed;
     top: 15rem;
-    right: 3.2rem;
+    right: 1.1rem;
     z-index: 999;
 
     ul {
         position: relative;
         li {
+            padding: 0 1.8rem;
             &.on a::before {
                 height: 6vh;
                 background: #fff;

@@ -1,6 +1,74 @@
 .tranning {
     ul {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #111;
+
+            a {
+                .img_box {
+                    margin: 0 0 2.4rem 0;
+                }
+
+                span {
+                    padding: 0 1.5rem;
+                    display: block;
+                    margin: 0 0 1.2rem 0;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+
+                p {
+                    padding: 0 1.5rem;
+                    color: #aaa;
+                    margin: 0 0 4rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    
+}
+@media (max-width: 768px) {
+    .tranning {
+        ul {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            padding-right: 2.5rem;
+    
+            li {
+                overflow: hidden;
+                border-radius: 1rem;
+                background: #111;
+    
+                a {
+                    .img_box {
+                        margin: 0 0 1.2rem 0;
+                    }
+    
+                    span {
+                        padding: 0 1.5rem;
+                        display: block;
+                        margin: 0 0 1.2rem 0;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                    }
+    
+                    p {
+                        font-size: 1.4rem;
+                        padding: 0 1.5rem;
+                        color: #aaa;
+                        margin: 0 0 1.2rem 0;
+                    }
+                }
+            }
+        }
     }
 }
