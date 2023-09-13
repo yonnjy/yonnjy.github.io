@@ -4,6 +4,7 @@ $(function () {
         navigation: false,
         css3: false,
         scrollOverflow: false,
+        scrollingSpeed: 1200,
         parallax: true,
 
         afterRender: function () {
@@ -12,9 +13,11 @@ $(function () {
 
         afterLoad: function (lnk, idx) {
             $('#main .section').eq(idx - 1).addClass('on').siblings().removeClass('on');
-            $('.btn_link li').eq(idx - 1).addClass('on').siblings().removeClass('on');
-            // $('.btn_link li').eq(idx).removeClass('on');
         },
+
+        onLeave: function (idx, nidx) {
+            $('.btn_link li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
+        }
     });
 
     // mouse pointer
