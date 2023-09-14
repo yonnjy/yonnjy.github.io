@@ -98,7 +98,7 @@
     }
 
     &.on .info_wrap {
-        animation: swing 3s infinite;
+        animation: swing 3s 2;
     }
 }
 
@@ -212,7 +212,7 @@
             }
         }
         &.on .info_wrap {
-            animation: swing 3s;
+            animation: swing 3s 2;
         }
     }
 }

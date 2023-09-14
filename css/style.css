@@ -765,13 +765,13 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-135%, 75%) rotate(-35deg);
+  transform: translate(-160%, -60%) rotate(-35deg);
 }
 .pofol .img_box .im02 {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(14%, -100%) rotate(-35deg);
+  transform: translate(100%, -120%) rotate(-35deg);
 }
 .pofol .img_box .im03 {
   position: absolute;
@@ -1025,10 +1025,6 @@ p {
   .pofol .txt_box .link .website a {
     background: #ffdb00;
   }
-  .pofol.on .img_box_odd {
-    transform: translate(0, -50%);
-    visibility: visible;
-  }
   .pofol.on .img_box .top, .pofol.on .img_box .bot {
     transform: translate(0, 0);
     visibility: visible;
@@ -1182,7 +1178,7 @@ p {
   color: #aaa;
 }
 .info.on .info_wrap {
-  animation: swing 3s infinite;
+  animation: swing 3s 2;
 }
 
 @keyframes swing {
@@ -1283,6 +1279,6 @@ p {
     color: #aaa;
   }
   .info.on .info_wrap {
-    animation: swing 3s;
+    animation: swing 3s 2;
   }
 }/*# sourceMappingURL=style.css.map */

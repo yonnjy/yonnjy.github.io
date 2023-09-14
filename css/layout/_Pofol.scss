@@ -15,14 +15,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            transform: translate(-135%, 75%) rotate(-35deg);
+            transform: translate(-160%, -60%) rotate(-35deg);
         }
 
         .im02 {
             position: absolute;
             top: 0;
             left: 0;
-            transform: translate(14%, -100%) rotate(-35deg);
+            transform: translate(100%, -120%) rotate(-35deg);
         }
 
         .im03 {
@@ -336,11 +336,6 @@
                     }
                 }
             }
-        }
-
-        &.on .img_box_odd {
-            transform: translate(0, -50%);
-            visibility: visible;
         }
 
         &.on .img_box .top,
