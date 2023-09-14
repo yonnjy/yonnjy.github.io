@@ -361,6 +361,7 @@
                 width: 5px;
                 height: 5px;
                 background: $point-color;
+                z-index: -1;
                 transform: rotate(45deg);
                 animation: after 5s infinite;
             }

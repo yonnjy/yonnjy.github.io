@@ -519,6 +519,7 @@ p {
     width: 5px;
     height: 5px;
     background: #ffd900;
+    z-index: -1;
     transform: rotate(45deg);
     animation: after 5s infinite;
   }
@@ -758,7 +759,7 @@ p {
 .pofol .img_box img {
   margin: 0 3rem 0 0;
   border-radius: 2rem;
-  filter: brightness(80%);
+  filter: brightness(90%);
   visibility: hidden;
 }
 .pofol .img_box .im01 {
@@ -1229,7 +1230,7 @@ p {
   .info .inner .info_wrap {
     position: relative;
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.2);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.1);
