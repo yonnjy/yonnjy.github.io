@@ -7,7 +7,6 @@ html {
 }
 
 body {
-    user-select: none;
     font-size: 1.6rem;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -34,6 +33,7 @@ body {
 .section {
     height: 100vh;
     color: #fff;
+    overflow: hidden;
 
     h2 {
         position: absolute;
@@ -54,7 +54,13 @@ p {
 }
 
 ._bg {
-    background: #000;
+    background: url(../../images/bg_r.png);
+    z-index: 0;
+}
+
+::selection {
+    background: $point-color;
+    color: $b-color;
 }
 
 #cursor {

@@ -8,7 +8,6 @@
     word-break: keep-all;
 }
 
-
 *::before,
 *::after {
     box-sizing: border-box;
