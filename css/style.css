@@ -49,6 +49,8 @@ p {
 
 ._bg {
   background: url(../../images/bg_r.png);
+  background-blend-mode: multiply;
+  background-color: #444;
   z-index: 0;
 }
 
@@ -106,6 +108,11 @@ p {
   }
   .poin .cursor__inner {
     display: none;
+  }
+  ._bg {
+    background: url(../../images/bg_r.png);
+    background-blend-mode: inherit;
+    z-index: 0;
   }
 }
 .btn_link {
@@ -1175,7 +1182,7 @@ p {
   color: #aaa;
 }
 .info.on .info_wrap {
-  animation: swing 3s;
+  animation: swing 3s infinite;
 }
 
 @keyframes swing {

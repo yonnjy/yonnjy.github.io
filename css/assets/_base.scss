@@ -55,6 +55,8 @@ p {
 
 ._bg {
     background: url(../../images/bg_r.png);
+    background-blend-mode: multiply;
+    background-color: #444;
     z-index: 0;
 }
 
@@ -116,5 +118,11 @@ p {
         .cursor__inner {
             display: none;
         }
+    }
+
+    ._bg {
+        background: url(../../images/bg_r.png);
+        background-blend-mode: inherit;
+        z-index: 0;
     }
 }
