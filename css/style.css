@@ -224,19 +224,17 @@ p {
 .int .gooey::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
-  background: #ffea71;
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
   transform: rotate(45deg);
   animation: before 5s linear infinite;
 }
 .int .gooey::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+  width: 5px;
+  height: 5px;
   background: #ffd900;
   transform: rotate(45deg);
   animation: after 5s linear infinite;
@@ -244,13 +242,15 @@ p {
 @keyframes before {
   0% {
     top: -40px;
-    left: 13.8vw;
+    left: 13.9vw;
+    border-radius: 50%;
   }
-  98% {
+  97% {
     top: 69.5vh;
-    left: 13.5vw;
-    width: 20px;
-    height: 20px;
+    left: 13.8vw;
+    width: 10px;
+    height: 10px;
+    transform: rotate(360deg);
     opacity: 1;
   }
   100% {
@@ -264,23 +264,23 @@ p {
 @keyframes after {
   0% {
     top: -40px;
-    left: 13.8vw;
-  }
-  98% {
-    top: 70vh;
-    left: 13.5vw;
-    width: 20px;
-    height: 20px;
+    left: 13.9vw;
     border-radius: 50%;
+  }
+  97% {
+    top: 70vh;
+    left: 13.8vw;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-360deg);
     opacity: 1;
   }
   100% {
     top: 68vh;
-    left: 14vw;
-    width: 5px;
-    height: 5px;
+    left: 15vw;
+    width: 15px;
+    height: 15px;
     opacity: 0;
-    border-radius: 50%;
   }
 }
 .int .inner {
@@ -362,19 +362,17 @@ p {
   .int .gooey::before {
     content: "";
     position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
-    background: #ffea71;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
     transform: rotate(45deg);
     animation: before 5s linear infinite;
   }
   .int .gooey::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    width: 5px;
+    height: 5px;
     background: #ffd900;
     transform: rotate(45deg);
     animation: after 5s linear infinite;
@@ -382,18 +380,20 @@ p {
   @keyframes before {
     0% {
       top: -40px;
-      left: 13vw;
+      left: 13.8vw;
+      border-radius: 50%;
     }
-    98% {
-      top: 69vh;
-      left: 13.5vw;
+    97% {
+      top: 69.5vh;
+      left: 13.8vw;
       width: 10px;
       height: 10px;
+      transform: rotate(360deg);
       opacity: 1;
     }
     100% {
-      top: 69vh;
-      left: 13vw;
+      top: 68vh;
+      left: 12vw;
       width: 15px;
       height: 15px;
       opacity: 0;
@@ -402,23 +402,23 @@ p {
   @keyframes after {
     0% {
       top: -40px;
-      left: 13vw;
+      left: 13.8vw;
+      border-radius: 50%;
     }
-    98% {
+    97% {
       top: 70vh;
-      left: 13.5vw;
+      left: 13.8vw;
       width: 10px;
       height: 10px;
-      border-radius: 50%;
+      transform: rotate(-360deg);
       opacity: 1;
     }
     100% {
       top: 68vh;
-      left: 14.5vw;
-      width: 5px;
-      height: 5px;
+      left: 15vw;
+      width: 15px;
+      height: 15px;
       opacity: 0;
-      border-radius: 50%;
     }
   }
   .int .inner {
@@ -500,63 +500,83 @@ p {
   .int .gooey::before {
     content: "";
     position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
-    background: #ffea71;
+    width: 5px;
+    height: 5px;
+    background: #fff2de;
     transform: rotate(45deg);
-    animation: before 5s linear infinite;
+    animation: before 5s infinite;
   }
   .int .gooey::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 0% 100% 40% 60%/0% 60% 40% 100%;
+    width: 5px;
+    height: 5px;
     background: #ffd900;
     transform: rotate(45deg);
-    animation: after 5s linear infinite;
+    animation: after 5s infinite;
   }
   @keyframes before {
     0% {
-      top: -40px;
-      left: 11vw;
+      top: -43px;
+      left: 13.5vw;
+      border-radius: 50%;
     }
-    98% {
-      top: 69vh;
+    97% {
+      top: 69.4vh;
       left: 13vw;
-      width: 10px;
-      height: 10px;
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(360deg);
+      border-radius: 50%;
       opacity: 1;
     }
+    98% {
+      top: 68vh;
+      left: 10vw;
+      width: 4rem;
+      height: 4rem;
+      opacity: 0.2;
+    }
     100% {
-      top: 69vh;
-      left: 12vw;
-      width: 15px;
-      height: 15px;
+      top: 64vh;
+      left: 4vw;
+      width: 8rem;
+      height: 8rem;
       opacity: 0;
     }
   }
   @keyframes after {
     0% {
       top: -40px;
-      left: 11vw;
+      left: 13.5vw;
+      border-radius: 50%;
     }
-    98% {
-      top: 70vh;
+    97% {
+      top: 69.5vh;
       left: 13vw;
       width: 10px;
       height: 10px;
-      border-radius: 50%;
+      transform: rotate(-360deg);
+      background: #ffd900;
+      border-radius: 0;
       opacity: 1;
     }
-    100% {
+    98% {
       top: 68vh;
-      left: 14vw;
-      width: 5px;
-      height: 5px;
-      opacity: 0;
+      left: 10vw;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
+      opacity: 0.2;
+    }
+    100% {
+      top: 64vh;
+      left: 4vw;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      opacity: 0;
+      background: #fff;
     }
   }
   .int .inner {
@@ -663,7 +683,7 @@ p {
 
 @media (max-width: 768px) {
   .po01 {
-    background: url(../../images/sec01_bg02.png) no-repeat center top/cover;
+    background: url(../../images/sec01_bg.png) no-repeat center top/cover;
   }
   .po01 .color span {
     background: #F5E8DF;
@@ -721,59 +741,42 @@ p {
   }
 }
 .pofol {
-  overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.pofol .img_box_odd {
-  position: absolute;
-  width: 84rem;
-  height: 90rem;
-  overflow: hidden;
-  top: 50%;
-  left: 10.5rem;
-  transform: translate(-150%, -50%);
-  border-radius: 2rem;
-  z-index: 999;
-  opacity: 0.8;
-  transition: 0.5s 0.5s;
-}
-.pofol .img_box_odd img {
-  transition: 3s;
-}
-.pofol .img_box_odd:hover {
-  opacity: 1;
-}
-.pofol .img_box_odd:hover img {
-  transform: translate(0, calc(-100% + 90rem));
-}
 .pofol .img_box {
-  position: absolute;
-  top: 10%;
-  left: -20%;
-  transform: rotate(-35deg);
   z-index: 999;
 }
-.pofol .img_box > * img {
+.pofol .img_box img {
   margin: 0 3rem 0 0;
   border-radius: 2rem;
   filter: brightness(80%);
-  transition: 0.5s;
-}
-.pofol .img_box > * img:hover {
-  filter: brightness(100%);
-}
-.pofol .img_box .top {
-  margin: 0 0 3rem 44rem;
-  transform: translate(-150%, 0);
   visibility: hidden;
-  transition: 0.5s 0.5s;
 }
-.pofol .img_box .bot {
-  transform: translate(-150%, 0);
-  visibility: hidden;
-  transition: 0.5s 0.8s;
+.pofol .img_box .im01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-135%, 75%) rotate(-35deg);
+}
+.pofol .img_box .im02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(14%, -100%) rotate(-35deg);
+}
+.pofol .img_box .im03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-80%, 220%) rotate(-35deg);
+}
+.pofol .img_box .im04 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(430%, 200%) rotate(-35deg);
 }
 .pofol .txt_box {
   text-align: right;
@@ -866,12 +869,36 @@ p {
 .pofol .txt_box .link .website a {
   background: #ffdb00;
 }
-.pofol.on .img_box_odd {
-  transform: translate(0, -50%);
+.pofol.on .img_box .im01 {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  transform: translate(-20%, 51%) rotate(-35deg);
+  transition: 0.5s 0.5s;
   visibility: visible;
 }
-.pofol.on .img_box .top, .pofol.on .img_box .bot {
-  transform: translate(0, 0);
+.pofol.on .img_box .im02 {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  transform: translate(14%, -22%) rotate(-35deg);
+  transition: 0.5s 1s;
+  visibility: visible;
+}
+.pofol.on .img_box .im03 {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  transform: translate(-20%, 150%) rotate(-35deg);
+  transition: 0.5s 1.5s;
+  visibility: visible;
+}
+.pofol.on .img_box .im04 {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  transform: translate(270%, 85%) rotate(-35deg);
+  transition: 0.5s 2s;
   visibility: visible;
 }
 .pofol.on .txt_box {
@@ -883,9 +910,6 @@ p {
   .pofol {
     transition: 0.5s;
     overflow: hidden;
-  }
-  .pofol .img_box_odd {
-    display: none;
   }
   .pofol .img_box {
     display: none;
@@ -901,7 +925,7 @@ p {
   }
   .pofol .txt_box .tit {
     position: relative;
-    margin: 0 0 4rem 0;
+    margin: 0 0 4rem 2rem;
   }
   .pofol .txt_box .tit::after {
     content: "";
@@ -925,7 +949,7 @@ p {
   }
   .pofol .txt_box .txt {
     position: relative;
-    margin: 0 0 14rem 0;
+    margin: 0 0 14rem 2rem;
   }
   .pofol .txt_box .txt .list li {
     padding: 0 0 1.9rem 0;
@@ -1059,11 +1083,11 @@ p {
     padding: 0 1.5rem;
     display: block;
     margin: 0 0 1.2rem 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
   }
   .tranning ul li a p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: 0 1.5rem;
     color: #aaa;
     margin: 0 0 1.2rem 0;
@@ -1150,6 +1174,24 @@ p {
   font-weight: 500;
   color: #aaa;
 }
+.info.on .info_wrap {
+  animation: swing 3s;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 @media (max-width: 768px) {
   .info .inner {
     display: flex;
@@ -1232,5 +1274,8 @@ p {
   .info .inner .info_wrap .txt_box .menu li {
     font-weight: 500;
     color: #aaa;
+  }
+  .info.on .info_wrap {
+    animation: swing 3s;
   }
 }/*# sourceMappingURL=style.css.map */

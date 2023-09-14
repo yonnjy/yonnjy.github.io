@@ -1,62 +1,42 @@
 .pofol {
-    overflow: hidden;
     user-select: none;
 
-    .img_box_odd {
-        position: absolute;
-        width: 84rem;
-        height: 90rem;
-        overflow: hidden;
-        top: 50%;
-        left: 10.5rem;
-        transform: translate(-150%, -50%);
-        border-radius: 2rem;
+    .img_box {
         z-index: 999;
-        opacity: 0.8;
-        transition: .5s .5s;
 
         img {
-            transition: 3s;
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &:hover img {
-            transform: translate(0, calc(-100% + 90rem));
-        }
-    }
-
-    .img_box {
-        position: absolute;
-        top: 10%;
-        left: -20%;
-        transform: rotate(-35deg);
-        z-index: 999;
-
-        &>* img {
             margin: 0 3rem 0 0;
             border-radius: 2rem;
             filter: brightness(80%);
-            transition: .5s;
-
-            &:hover {
-                filter: brightness(100%);
-            }
+            visibility: hidden;
         }
 
-        .top {
-            margin: 0 0 3rem 44rem;
-            transform: translate(-150%, 0);
-            visibility: hidden;
-            transition: .5s .5s;
+        .im01 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-135%, 75%) rotate(-35deg);
         }
 
-        .bot {
-            transform: translate(-150%, 0);
-            visibility: hidden;
-            transition: .5s .8s;
+        .im02 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(14%, -100%) rotate(-35deg);
+        }
+
+        .im03 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-80%, 220%) rotate(-35deg);
+        }
+
+        .im04 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(430%, 200%) rotate(-35deg);
         }
     }
 
@@ -178,14 +158,39 @@
         }
     }
 
-    &.on .img_box_odd {
-        transform: translate(0, -50%);
+    &.on .img_box .im01 {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        transform: translate(-20%, 51%) rotate(-35deg);
+        transition: .5s .5s;
         visibility: visible;
     }
 
-    &.on .img_box .top,
-    &.on .img_box .bot {
-        transform: translate(0, 0);
+    &.on .img_box .im02 {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        transform: translate(14%, -22%) rotate(-35deg);
+        transition: .5s 1s;
+        visibility: visible;
+    }
+
+    &.on .img_box .im03 {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        transform: translate(-20%, 150%) rotate(-35deg);
+        transition: .5s 1.5s;
+        visibility: visible;
+    }
+
+    &.on .img_box .im04 {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        transform: translate(270%, 85%) rotate(-35deg);
+        transition: .5s 2s;
         visibility: visible;
     }
 
@@ -199,10 +204,6 @@
     .pofol {
         transition: .5s;
         overflow: hidden;
-
-        .img_box_odd {
-            display: none;
-        }
 
         .img_box {
             display: none;
@@ -219,7 +220,7 @@
 
             .tit {
                 position: relative;
-                margin: 0 0 4rem 0;
+                margin: 0 0 4rem 2rem;
 
                 &::after {
                     content: '';
@@ -247,7 +248,7 @@
 
             .txt {
                 position: relative;
-                margin: 0 0 14rem 0;
+                margin: 0 0 14rem 2rem;
 
                 .list {
                     li {

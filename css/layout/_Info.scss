@@ -96,6 +96,17 @@
             }
         }
     }
+
+    &.on .info_wrap {
+        animation: swing 3s;
+    }
+}
+
+@keyframes swing {
+    0% {transform: rotate(0);}
+    30% {transform: rotate(2deg);}
+    70% {transform: rotate(-2deg);}
+    100% {transform: rotate(0);}
 }
 
 @media (max-width: 768px) {
@@ -199,6 +210,9 @@
                     }
                 }
             }
+        }
+        &.on .info_wrap {
+            animation: swing 3s;
         }
     }
 }
