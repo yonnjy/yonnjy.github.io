@@ -149,6 +149,27 @@
             }
         }
     }
+
+    .txt_box {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        .browse {
+            display: inline-block;
+            font-size: 18px;
+            color: #888;
+            margin-right: 10px;
+        }
+        p {
+            display: inline-block;
+            color: #666;
+            padding-right: 20px;
+        }
+    }
 }
 
 @media (max-width: 1600px) {
@@ -301,6 +322,28 @@
                         background: #FFDB00;
                     }
                 }
+            }
+        }
+
+        .txt_box {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            display: flex;
+            align-items: center;
+            user-select: none;
+    
+            .browse {
+                display: inline-block;
+                font-size: 20px;
+                color: #888;
+                margin-right: 10px;
+            }
+            p {
+                display: inline-block;
+                color: #666;
+                font-size: 14px;
+                padding-right: 15px;
             }
         }
     }
